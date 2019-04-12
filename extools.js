@@ -33,6 +33,9 @@
                 case "modal":
                     self._modal();
                     break;
+                case "clone":
+                    self._clone();
+                    break;
                 default:
                     throw new Error("Error! No Tool selected!");
             }
@@ -54,14 +57,14 @@
                     <input type="text" class="hidden" data-target="value">
                 </div>`;
             var input = self.container.querySelector("input"),
-                value = self.container.querySelector('input[data-target="value"]'),
+                value = self.container.querySelector('[data-target="value"]'),
                 insert = self.container.querySelector('[data-target="insert"]'),
                 tags = [];
 
             if (self.options["name"])
                 value.name = self.options["name"];
             input.addEventListener("input", function () {
-                var entered = input.value.split(",");
+                let entered = input.value.split(",");
                 if (entered.length > 1) {
                     entered.forEach(function (t) {
                         let filtered = filter(t);
@@ -89,14 +92,14 @@
                 text = filter(text);
                 if (text.length > 0)
                     if (!tags.find(x => x.text == text)) {
-                        var tag = {
+                        let tag = {
                             text: text,
                             el: document.createElement("span")
                         }
                         tag.el.classList.add("et--taginput--tag");
                         tag.el.innerHTML =
                             `<span>${text}</span>
-                            <span class="delete" data-action="remove"><i class="fas fa-times-circle"></i></span>`;
+                            <span class="delete" data-action="remove"></span>`;
                         tag.el.querySelector('[data-action="remove"]').onclick = () => { remove(tags.indexOf(tag)) }
                         tags.push(tag);
                         insert.parentNode.insertBefore(tag.el, insert);
@@ -105,13 +108,13 @@
                 input.value = "";
             }
             function remove(index) {
-                var tag = tags[index];
+                let tag = tags[index];
                 tags.splice(index, 1);
                 insert.parentNode.removeChild(tag.el);
                 refresh();
             }
             function refresh() {
-                var list = [];
+                let list = [];
                 tags.forEach(function (t) {
                     list.push(t.text);
                 });
@@ -123,7 +126,7 @@
         },
         _modal: function () {
             var self = this,
-                button = self.container.querySelector('button[data-action="show"]'),
+                button = self.container.querySelector('[data-action="show"]'),
                 hidden = self.container.querySelector('[data-target="hidden"]'),
                 html = hidden.innerHTML;
             hidden.innerHTML =
@@ -136,6 +139,29 @@
             }
             hidden.querySelector(".et--modal--overlay").onclick = () => {
                 hidden.classList.remove("is-active");
+            }
+        },
+        _clone: function () {
+            var self = this,
+                bucket = self.container.querySelector('[data-target="bucket"]'),
+                source = self.container.querySelector('[data-target="source"]'),
+                clone = self.container.querySelector('[data-action="clone"]'),
+                remove = source.querySelector('[data-action="remove"]'),
+                html = source.outerHTML.replace(/(\r\n|\n|\r)/gm, "").replace(/>( +)</g, "><");
+
+            remove.onclick = () => { bucket.removeChild(remove.closest('[data-target="source"]')) }
+            bucket.dataset.html = JSON.stringify(html);
+            clone.onclick = () => {
+                let item = createElementFromHTML(JSON.parse(bucket.dataset.html));
+                let removeBtn = item.querySelector('[data-action="remove"]');
+                removeBtn.onclick = () => { bucket.removeChild(removeBtn.closest('[data-target="source"]')) }
+                bucket.appendChild(item);
+            }
+
+            function createElementFromHTML(htmlString) {
+                let div = document.createElement('div');
+                div.innerHTML = htmlString;
+                return div.firstChild;
             }
         },
         _addAttributes: function () {
