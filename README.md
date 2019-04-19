@@ -17,11 +17,13 @@ Simply include it as a `<script>` tag from CDN.
 <script src="https://unpkg.com/extools@1.0.0/extools.js"></script>
 ```
 Or
-```javascript
-//Choose
+```sh
+# Use
 npm install extools
-//Or
+# Or
 yarn add extools
+```
+```javascript
 //Then
 const extools = require("extools");
 ```
