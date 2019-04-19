@@ -1,0 +1,23 @@
+{
+  "name": "extools",
+  "version": "1.0.0",
+  "description": "Extra Javascript Tools for your website",
+  "main": "extools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luuhai48/extools.git"
+  },
+  "keywords": [
+    "javascript",
+    "tools"
+  ],
+  "author": "LuuHai48",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luuhai48/extools/issues"
+  },
+  "homepage": "https://github.com/luuhai48/extools#readme"
+}

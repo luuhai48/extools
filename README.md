@@ -14,15 +14,20 @@
 ## Installation
 Simply include it as a `<script>` tag from CDN.
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/extools/0.0.1/extools.min.js"></script>
+<script src="https://unpkg.com/extools@1.0.0/extools.js"></script>
 ```
 Or
 ```javascript
+//Choose
+npm install extools
+//Or
+yarn add extools
+//Then
 const extools = require("extools");
 ```
 And don't forget `css`
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/extools/0.0.1/css/extools.min.css">
+<link rel="stylesheet" href="https://unpkg.com/extools@1.0.0/extools.css">
 ```
 
 ---
