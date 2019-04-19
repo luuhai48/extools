@@ -39,6 +39,6 @@ var t = new extools({
 |Attribute|Required|Uses|
 |---------|:------:|---|
 |container|yes|Defines container element for the tool|
-|tool|yes|Select the tool. Tools list [here](#tools-included)|
+|tool|yes|Select the tool.<br> Tools list [here](#tools-included)|
 |name|no|Name for the hidden Input|
 |data|no|`JSON array`. The tags will shown on load|
