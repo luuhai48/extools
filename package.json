@@ -1,6 +1,6 @@
 {
   "name": "extools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extra Javascript Tools for your website",
   "main": "extools.js",
   "scripts": {
