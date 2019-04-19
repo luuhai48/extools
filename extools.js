@@ -436,8 +436,8 @@
 
                 if (values.length == 3) {
                     var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
-                    var month = parseInt(values[0]) - 1;
-                    var day = parseInt(values[1]);
+                    var month = parseInt(values[1]) - 1;
+                    var day = parseInt(values[0]);
                     var d = new Date(year, month, day);
                     if (!isNaN(d)) {
                         var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
@@ -562,7 +562,7 @@
             self.container.classList.add("et--calculator");
             self.container.innerHTML =
                 `<div class="et--calculator--input" data-target="output"></div>
-                <div">
+                <div>
                   <div class="et--calculator--operators">
                     <div>+</div>
                     <div>-</div>

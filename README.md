@@ -14,7 +14,7 @@
 ## Installation
 Simply include it as a `<script>` tag from CDN.
 ```html
-<script src="https://unpkg.com/extools@1.0.0/extools.js"></script>
+<script src="https://unpkg.com/extools@1.0.2/extools.min.js"></script>
 ```
 Or
 ```sh
@@ -29,7 +29,7 @@ const extools = require("extools");
 ```
 And don't forget `css`
 ```html
-<link rel="stylesheet" href="https://unpkg.com/extools@1.0.0/extools.css">
+<link rel="stylesheet" href="https://unpkg.com/extools@1.0.2/extools.min.css">
 ```
 
 ---
@@ -57,6 +57,7 @@ var t = new extools({
 |name|no|Name attribute for the hidden Input|
 |data|no|`JSON array`. The tags will shown on load|
 |attributes|no|`JSON array`. Set custom attribute for an element inside container|
+
 ### Modal
 ##### [See example](https://luuhai48.github.io/extools/example/modal.html)
 First, create a `Container` for the tool
