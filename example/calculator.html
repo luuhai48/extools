@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ExTools</title>
+    <link rel="stylesheet" href="../extools.css">
+    <script src="../extools.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .is-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title is-2 is-center" style="margin: 30px;color:royalblue">ExTools</h1>
+
+
+    <div class="container">
+        <h5 class="title is-5">Calculator</h5>
+        <div class="container6"></div>
+        <hr>
+    </div>
+</body>
+<script>
+    var t = new extools({
+        container: ".container6",
+        tool: "calculator",
+        name: "calculator"
+    });
+</script>
+
+</html>

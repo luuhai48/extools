@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ExTools</title>
+    <link rel="stylesheet" href="../extools.css">
+    <script src="../extools.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .is-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title is-2 is-center" style="margin: 30px;color:royalblue">ExTools</h1>
+
+    <div class="container">
+        <h5 class="title is-5">Clone</h5>
+        <div class="container4">
+            <div data-target="bucket" class="panel" style="margin-bottom:0">
+                <div class="panel-block" data-target="source">
+                    <span>Email:</span>
+                    <input type="email" class="input" name="emails[]" placeholder="example@gmail.com"
+                        style="margin:0 5px">
+                    <span class="button is-danger" data-action="remove"><span class="icon"><i
+                                class="far fa-trash-alt"></i></span></span>
+                </div>
+            </div>
+            <button type="button" class="button is-dark is-small" style="margin-top:5px"
+                data-action="clone">Clone</button>
+        </div>
+    </div>
+</body>
+<script>
+    var t = new extools({
+        container: ".container4",
+        tool: "clone"
+    });
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ExTools</title>
+    <link rel="stylesheet" href="../extools.css">
+    <script src="../extools.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .is-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title is-2 is-center" style="margin: 30px;color:royalblue">ExTools</h1>
+
+    <div class="container">
+        <h5 class="title is-5">DatePicker</h5>
+        <div class="container5"></div>
+        <hr>
+    </div>
+</body>
+<script>
+    var t = new extools({
+        container: ".container5",
+        tool: "datepicker",
+        date: "2019-04-19",
+        name: "datepicker",
+        attributes: [{ el: ".input", name: "placeholder", value: "Pick a date" }]
+    });
+</script>
+
+</html>
