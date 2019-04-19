@@ -1,4 +1,4 @@
-# [ExTools](https://luuhai48.github.io)
+# [ExTools](https://github.com/luuhai48/extools)
 > Extra Javascript Tools for your website
 > Quick & Easy
 ---
