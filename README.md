@@ -3,13 +3,13 @@
 > Quick & Easy
 ---
 ## Tools included:
-    - TagInput
-    - Modal
-    - Clone
-    - AutoComplete
-    - DatePicker
-    - Calculator
-    - Upload
+ * [TagInput](#taginput)
+ * [Modal](#modal)
+ * [Clone](#clone)
+ * [AutoComplete](#autocomplete)
+ * [DatePicker](#datepicker)
+ * [Calculator](#calculator)
+ * [Upload](#upload)
 ---
 ## Installation
 Simply include it as a `<script>` tag from CDN.
@@ -34,7 +34,7 @@ And don't forget `css`
 
 ---
 ## Documentation & Example
-#### TagInput
+### TagInput
 ##### [See example](https://luuhai48.github.io/extools/example/taginput.html)
 First, create a blank `Container` for the tool
 ```html
@@ -57,7 +57,7 @@ var t = new extools({
 |name|no|Name attribute for the hidden Input|
 |data|no|`JSON array`. The tags will shown on load|
 |attributes|no|`JSON array`. Set custom attribute for an element inside container|
-#### Modal
+### Modal
 ##### [See example](https://luuhai48.github.io/extools/example/modal.html)
 First, create a `Container` for the tool
 ```html
@@ -83,7 +83,7 @@ var t = new extools({
 |tool|yes|Select the tool. Tools list [here](#tools-included)|
 |attributes|no|`JSON array`. Set custom attribute for an element inside the container|
 
-#### AutoComplete
+### AutoComplete
 ##### [See example](https://luuhai48.github.io/extools/example/autocomplete.html)
 First, create a `Container` for the tool
 ```html
@@ -109,7 +109,7 @@ var t = new extools({
 |highlight|no|Color code for highlighting the text|
 |attributes|no|`JSON array`. Set custom attribute for an element inside the container|
 
-#### Clone
+### Clone
 ##### [See example](https://luuhai48.github.io/extools/example/clone.html)
 First, create a `Container` for the tool
 ```html
@@ -139,7 +139,7 @@ var t = new extools({
 |tool|yes|Select the tool. Tools list [here](#tools-included)|
 |attributes|no|`JSON array`. Set custom attribute for an element inside the container|
 
-#### DatePicker
+### DatePicker
 ##### [See example](https://luuhai48.github.io/extools/example/datepicker.html)
 First, create a `Container` for the tool
 ```html
@@ -163,7 +163,7 @@ var t = new extools({
 |date|no|`yyyy-mm-dd`. The date selected on start|
 |attributes|no|`JSON array`. Set custom attribute for an element inside the container|
 
-#### Calculator
+### Calculator
 ##### [See example](https://luuhai48.github.io/extools/example/calculator.html)
 First, create a `Container` for the tool
 ```html
@@ -185,7 +185,7 @@ var t = new extools({
 |name|no|Name attribute for the hidden Input|
 |attributes|no|`JSON array`. Set custom attribute for an element inside the container|
 
-#### Upload
+### Upload
 ##### [See example](https://luuhai48.github.io/extools/example/upload.html)
 First, create a `Container` for the tool
 ```html
